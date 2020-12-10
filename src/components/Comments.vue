@@ -5,7 +5,7 @@
     <div class="comment-list">
       <div
         class="comment-item"
-        v-for="(comment, index) in comments"
+        v-for="(comment, index) in allComments"
         v-bind:key="index"
       >
         <span><strong>Autor:</strong> {{ comment.author }}</span>
@@ -45,7 +45,7 @@ export default {
     allComments() {
       return this.comments.map((comment) => ({
         ...comment,
-        name: comment.name.trim() === "" ? "Anônimo" : comment.name,
+        author: comment.author.trim() === "" ? "Anônimo" : comment.author,
       }));
     },
   },
