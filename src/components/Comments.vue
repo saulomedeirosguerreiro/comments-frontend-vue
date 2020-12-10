@@ -1,6 +1,6 @@
 <template>
   <div id="comments">
-    <h1>Comentário</h1>
+    <h1>Comentários</h1>
     <CommentForm v-on:add-to-comments="addToComments" />
     <div class="comment-list">
       <div
